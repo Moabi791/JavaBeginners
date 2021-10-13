@@ -10,29 +10,27 @@ package Lesson12;
  * @author moabi
  */
 public class Main {
-
     public static void main(String[] args) {
-//        
-        Shirt shirt01 = new Shirt(15, "Hawaiain", 'R', 55.9, 'M', "Short sleeve");
-        
-        Jeans jeans01 = new Jeans ('L', "Long", 16, "Cut", 'B', 60.9 );
+        Shirt shirt01 = new Shirt (15, "Hawaian", 'R', 55.9, 'M', "Short sleeve");
         shirt01.display();
-         System.out.println("............\n");
-        jeans01.display();
+        Shirt shirt02 = new Shirt (16, "Polo", 'R', 25.9, 'M', "Short sleeve");
+        shirt01.display();
         
-        System.out.println("............\n");
-        Clothing jeans02 = new Jeans ('M', "Long", 12, "Cut", 'R', 70.0 );
-        if (jeans02 instanceof Jeans){
-        //char jeanssize = (((Jeans)jeans02).getSize());
-        System.out.println("Medium Jeans Size: " + ((Jeans)jeans02).getSize());
-    }else{
-            System.out.println("Item ia not a jean");
-            }
+//        System.out.println("..............................");
+//        System.out.println("Item1: " +shirt01.toString());
         
-        System.out.println("............\n");
-        jeans02.display();
-       
-        System.out.println(jeans02.tostring());
+        System.out.println("..............................");
+        Trouser trouser01 = new Trouser (23, "Cammo", 'G', 65.9, 32, 31);
+        trouser01.display();
+        
+        System.out.println("..............................");
+        
+        
+        System.out.println("\nShirt Description: " + shirt02.getDesc());
+        if (shirt02 instanceof Shirt){
+            System.out.println("\nPolo Fit: " + ((Shirt)shirt02).getFit());
+        }else{
+            System.out.println("\nitem is not a shirt");
+        }
     }
-
 }
